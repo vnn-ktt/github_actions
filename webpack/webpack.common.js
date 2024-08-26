@@ -79,12 +79,11 @@ module.exports = {
 		extensions: ['.js', '.jsx', '.tsx', '.ts', '.json'], //указываем файлы с которыми будет работать webpack
 	},
 	plugins: [
-		plugins: [
 		new webpack.EnvironmentPlugin({
 		            PUBLIC_PATH: null, // значение по умолчанию null, если переменная process.env.PUBLIC_PATH не передана
 		            NODE_ENV: 'development', // значение по умолчанию 'development', если переменная process.env.NODE_ENV не передана
 		        }),
-		],
+		,
 		new HTMLWebpackPlugins({
 			template: path.resolve(__dirname, '..', './public/index.html'),
 		}),
